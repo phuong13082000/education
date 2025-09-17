@@ -118,4 +118,8 @@
   body {
     @apply bg-accent text-foreground;
   }
+
+  section{
+    @apply p-5 m-[0_auto] max-w-[1200px];
+  }
 }

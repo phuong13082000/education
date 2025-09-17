@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const menuItems = [
   { name: "Home", icon: "fas fa-home", href: "/" },
-  { name: "About", icon: "fas fa-info-circle", href: "#" },
+  { name: "About", icon: "fas fa-info-circle", href: "/about" },
   { name: "Courses", icon: "fas fa-graduation-cap", href: "#" },
   { name: "Teachers", icon: "fas fa-chalkboard-user", href: "#" },
   { name: "Contact", icon: "fas fa-headset", href: "#" },

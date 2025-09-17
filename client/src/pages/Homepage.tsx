@@ -94,12 +94,12 @@ const courses = [
 export default function Homepage() {
   return (
     <>
-      <section className="p-5 m-[0_auto] max-w-[1200px]">
+      <section>
         <h1 className="text-[25px] text-foreground mb-6 border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid pb-4">
           Quick Options
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-start">
           <div className="bg-card rounded-[0.5rem] p-5">
             <h3 className="text-[20px] text-foreground">Likes And Comments</h3>
             <p className="text-gray-400 text-[17px] mt-4">
@@ -153,7 +153,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section className="p-5 m-[0_auto] max-w-[1200px]">
+      <section>
         <h1 className="text-[25px] text-foreground mb-6 border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid pb-4">
           Our Courses
         </h1>
