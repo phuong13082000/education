@@ -1,4 +1,5 @@
 import { useIsMobile } from "../hooks/use-mobile";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 
 const menuItems = [
@@ -9,13 +10,12 @@ const menuItems = [
   { name: "Contact", icon: "fas fa-headset", href: "#" },
 ];
 
-export const Sidebar = ({
-  open,
-  onClose,
-}: {
+type Sidebar = {
   open: boolean;
   onClose: () => void;
-}) => {
+};
+
+export const Sidebar = ({ open, onClose }: Sidebar) => {
   const isMobile = useIsMobile();
 
   return (
@@ -30,9 +30,9 @@ export const Sidebar = ({
 
       <div
         className={`
-          fixed top-0 left-0 h-screen w-[300px] bg-white 
-          border-r-[0.1rem] border-r-[rgba(0,0,0,0.2)] border-solid z-[1200] 
-          transform transition-transform duration-300 ease-in-out
+          fixed top-0 left-0 h-screen w-[300px] bg-background 
+          border-r-[0.1rem] border-r-[rgba(0,0,0,0.2)] border-solid 
+          z-[1200] transform transition-transform duration-300 ease-in-out
           overflow-y-auto overscroll-contain
           ${open ? "translate-x-0" : "-translate-x-full"}
         `}
@@ -50,12 +50,15 @@ export const Sidebar = ({
         </div>
 
         <div className="p-[30px_20px] text-center">
-          <img
-            src="pic-1.jpg"
-            alt=""
-            className="size-28 rounded-full object-contain mb-2.5 mx-auto block"
-          />
-          <h3 className="text-[20px] text-black overflow-hidden text-ellipsis whitespace-nowrap mx-auto">
+          <Avatar className="size-28 mx-auto mb-2.5">
+            <AvatarImage
+              src="pic-1.jpg"
+              alt="user-avatar"
+              className="object-contain"
+            />
+            <AvatarFallback>A</AvatarFallback>
+          </Avatar>
+          <h3 className="text-[20px] text-foreground overflow-hidden text-ellipsis whitespace-nowrap mx-auto">
             ano qty
           </h3>
           <p className="text-[18px] text-[#888] mx-auto">student</p>
@@ -65,16 +68,16 @@ export const Sidebar = ({
         </div>
 
         <nav>
-          {menuItems.map((item, idx) => (
+          {menuItems.map((item, id) => (
             <a
-              key={idx}
+              key={id}
               href={item.href}
               className="group block p-5 text-[20px]"
             >
               <i
-                className={`${item.icon} mr-4 text-black transition-all duration-200 group-hover:mr-8`}
+                className={`${item.icon} mr-4 text-foreground transition-all duration-200 group-hover:mr-8`}
               />
-              <span className="text-black group-hover:text-gray-500">
+              <span className="text-foreground group-hover:text-gray-500">
                 {item.name}
               </span>
             </a>
