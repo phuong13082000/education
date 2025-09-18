@@ -1,5 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { Badge } from "../components/ui/badge";
+import { Course } from "../components/course";
 import { Button } from "../components/ui/button";
 
 const categories = [
@@ -160,44 +159,7 @@ export default function Homepage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-start">
           {courses &&
-            courses.map((item, id) => (
-              <div className="bg-card rounded-[0.5rem] p-5" key={id}>
-                <div className="flex items-center gap-4 mb-6">
-                  <Avatar className="size-12">
-                    <AvatarImage
-                      src={item.author.avatar}
-                      alt={item.author.name}
-                      className="object-cover"
-                    />
-                    <AvatarFallback>
-                      {item.author.name ? item.author.name.charAt(0) : "?"}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h3 className="text-[18px] text-foreground mb-0.5">
-                      {item.author.name}
-                    </h3>
-                    <span className="text-[13px] text-gray-500">
-                      {item.author.createAt}
-                    </span>
-                  </div>
-                </div>
-                <div className="relative">
-                  <img
-                    src={item.thumb}
-                    alt=""
-                    className="w-full h-52 object-cover rounded-[5px]"
-                  />
-                  <Badge className="absolute top-2.5 left-2.5 rounded-[5px] p-[5px_15px] bg-[rgba(0,0,0,.3)] text-white text-[15px]">
-                    {item.totalVideo} videos
-                  </Badge>
-                </div>
-                <h3 className="text-[20px] text-foreground pb-1.5 pt-2.5">
-                  {item.title}
-                </h3>
-                <Button>View Playlist</Button>
-              </div>
-            ))}
+            courses.map((course) => <Course key={course.id} {...course} />)}
         </div>
 
         <div className="text-center mt-[20px]">

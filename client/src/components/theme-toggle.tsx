@@ -20,7 +20,7 @@ export const ThemeToggle = () => {
   return (
     <Button
       variant="outline"
-      className="ml-2 size-11"
+      className="ml-2 size-11 mt-1"
       onClick={() => setDarkMode(!darkMode)}
     >
       <span className={`fas ${darkMode ? "fa-moon" : "fa-sun"}`}></span>
