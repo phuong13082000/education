@@ -106,9 +106,7 @@ export default function Courses() {
   return (
     <>
       <section>
-        <h1 className="text-[25px] text-foreground mb-6 border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid pb-4">
-          Our Courses
-        </h1>
+        <h1 className="heading">Our Courses</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-start">
           {courses &&

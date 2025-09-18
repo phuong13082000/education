@@ -94,9 +94,7 @@ export default function Homepage() {
   return (
     <>
       <section>
-        <h1 className="text-[25px] text-foreground mb-6 border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid pb-4">
-          Quick Options
-        </h1>
+        <h1 className="heading">Quick Options</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-start">
           <div className="bg-card rounded-[0.5rem] p-5">
@@ -104,15 +102,15 @@ export default function Homepage() {
             <p className="text-gray-400 text-[17px] mt-4">
               Total Like: <span>25</span>
             </p>
-            <Button size="lg">View Likes</Button>
+            <Button>View Likes</Button>
             <p className="text-gray-400 text-[17px] mt-4">
               Total Comments: <span>25</span>
             </p>
-            <Button size="lg">View Comments</Button>
+            <Button>View Comments</Button>
             <p className="text-gray-400 text-[17px] mt-4">
               Save Playlists: <span>25</span>
             </p>
-            <Button size="lg">View Playlists</Button>
+            <Button>View Playlists</Button>
           </div>
 
           <div className="bg-card rounded-[0.5rem] p-5">
@@ -120,7 +118,7 @@ export default function Homepage() {
             <div className="flex flex-wrap gap-4 mt-5">
               {categories &&
                 categories.map((item, id) => (
-                  <Button variant="ghost" key={id}>
+                  <Button variant="secondary" key={id}>
                     <i className={item.icon}></i>
                     <span>{item.title}</span>
                   </Button>
@@ -133,7 +131,7 @@ export default function Homepage() {
             <div className="flex flex-wrap gap-4 mt-5">
               {topics &&
                 topics.map((item, id) => (
-                  <Button variant="ghost" key={id}>
+                  <Button variant="secondary" key={id}>
                     <i className={item.icon}></i>
                     <span>{item.title}</span>
                   </Button>
@@ -147,15 +145,13 @@ export default function Homepage() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Perspiciatis, nam?
             </p>
-            <Button size="lg">Get Started</Button>
+            <Button>Get Started</Button>
           </div>
         </div>
       </section>
 
       <section>
-        <h1 className="text-[25px] text-foreground mb-6 border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid pb-4">
-          Our Courses
-        </h1>
+        <h1 className="heading">Our Courses</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-start">
           {courses &&

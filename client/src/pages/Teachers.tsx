@@ -59,9 +59,7 @@ export default function Teachers() {
   return (
     <>
       <section>
-        <h1 className="text-[25px] text-foreground mb-6 border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid pb-4">
-          Expert Teachers
-        </h1>
+        <h1 className="heading">Expert Teachers</h1>
 
         <form
           action="#"
@@ -89,7 +87,7 @@ export default function Teachers() {
               itaque ipsam fuga ex et aliquam.
             </p>
             {/* register */}
-            <Button size="lg">Get Started</Button>
+            <Button>Get Started</Button>
           </div>
 
           {teachers &&
@@ -125,7 +123,7 @@ export default function Teachers() {
                   total likes : <span>{item.totalLike}</span>
                 </p>
                 {/* teacher profile */}
-                <Button size="lg" className="mt-3">
+                <Button className="mt-3">
                   View Profile
                 </Button>
               </div>

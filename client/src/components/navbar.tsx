@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
+import { Link } from "react-router-dom";
 
 type NavbarProp = {
   onToggleSidebar: () => void;
@@ -14,9 +15,9 @@ export const Navbar = ({ onToggleSidebar }: NavbarProp) => {
   return (
     <header className="sticky top-0 left-0 right-0 bg-background z-[1000] border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)] border-solid">
       <section className="flex items-center justify-between relative p-[15px_20px] m-[0_auto] max-w-[1200px]">
-        <a href="/" className="text-2xl text-foreground">
+        <Link to="/" className="text-2xl text-foreground">
           Educa.
-        </a>
+        </Link>
 
         <form
           action="#"

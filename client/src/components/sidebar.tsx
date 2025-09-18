@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useIsMobile } from "../hooks/use-mobile";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
@@ -63,15 +64,15 @@ export const Sidebar = ({ open, onClose }: Sidebar) => {
           </h3>
           <p className="text-[18px] text-[#888] mx-auto">student</p>
           <Button size="lg" className="w-full mx-auto mt-2 block">
-            View Profile
+            <Link to="/profile">View Profile</Link>
           </Button>
         </div>
 
         <nav>
           {menuItems.map((item, id) => (
-            <a
+            <Link
               key={id}
-              href={item.href}
+              to={item.href}
               className="group block p-5 text-[20px]"
             >
               <i
@@ -80,7 +81,7 @@ export const Sidebar = ({ open, onClose }: Sidebar) => {
               <span className="text-foreground group-hover:text-gray-500">
                 {item.name}
               </span>
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

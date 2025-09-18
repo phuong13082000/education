@@ -114,12 +114,16 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
     @apply bg-accent text-foreground;
   }
 
-  section{
+  section {
     @apply p-5 m-[0_auto] max-w-[1200px];
   }
+}
+
+.heading {
+  @apply text-2xl text-foreground mb-6 border-b-1 border-b-border border-solid pb-4;
 }
