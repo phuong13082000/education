@@ -31,7 +31,7 @@ export const Navbar = ({ onToggleSidebar }: NavbarProp) => {
             required
             className="text-lg"
           />
-          <Button type="submit" size="icon" variant="outline">
+          <Button type="submit" size="icon" variant="ghost">
             <Search className="h-5 w-5" />
           </Button>
         </form>
