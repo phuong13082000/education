@@ -12,6 +12,7 @@ export default function Login() {
           className="bg-card rounded-[5px] p-5 w-[500px]"
         >
           <h3 className="text-2xl text-center">Login Now</h3>
+
           <p className="text-[17px] pt-2.5">
             your email <span>*</span>
           </p>
@@ -23,6 +24,7 @@ export default function Login() {
             maxLength={50}
             className="m-[10px_0] p-3.5"
           />
+
           <p className="text-[17px] pt-2.5">
             your password <span>*</span>
           </p>
@@ -34,6 +36,7 @@ export default function Login() {
             maxLength={20}
             className="m-[10px_0] p-3.5"
           />
+          
           <Button type="submit" className="w-full mt-2.5">Submit</Button>
         </form>
       </section>

@@ -103,7 +103,7 @@ export default function Teachers() {
                     />
                     <AvatarFallback>
                       {item.author.name ? item.author.name.charAt(0) : "?"}
-                    </AvatarFallback>{" "}
+                    </AvatarFallback>
                   </Avatar>
                   <div>
                     <h3 className="text-[18px] text-foreground mb-0.5">

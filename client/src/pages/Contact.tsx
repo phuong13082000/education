@@ -46,9 +46,6 @@ export default function Contact() {
               className="m-[10px_0] p-3.5 text-[18px] h-[200px] resize-none"
               placeholder="enter your message"
               required
-              maxLength={1000}
-              cols={30}
-              rows={10}
             ></Textarea>
             <Button type="submit" size="lg" className="mt-3">
               Send Message

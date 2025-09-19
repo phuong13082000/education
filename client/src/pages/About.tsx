@@ -79,6 +79,28 @@ function StarRating({ rating }: { rating: number }) {
   return stars;
 }
 
+const data = [
+  {
+    id: 1,
+    icon: "fas fa-graduation-cap",
+    title: "+10K",
+    content: "online courses",
+  },
+  {
+    id: 2,
+    icon: "fas fa-user-graduate",
+    title: "+40k",
+    content: "brilliant students",
+  },
+  {
+    id: 3,
+    icon: "fas fa-chalkboard-user",
+    title: "+2K",
+    content: "expert tutors",
+  },
+  { id: 4, icon: "fas fa-briefcase", title: "100%", content: "job placement" },
+];
+
 export default function About() {
   return (
     <>
@@ -101,37 +123,19 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-start mt-8">
-          <div className="rounded-[5px] bg-card p-5 flex items-center gap-6">
-            <i className="fas fa-graduation-cap text-[40px]"></i>
-            <div>
-              <h3 className="text-[25px] mb-1">+10k</h3>
-              <p className="text-[17px]">online courses</p>
-            </div>
-          </div>
-
-          <div className="rounded-[5px] bg-card p-5 flex items-center gap-6">
-            <i className="fas fa-user-graduate text-[40px]"></i>
-            <div>
-              <h3 className="text-[25px] mb-1">+40k</h3>
-              <p className="text-[17px]">brilliant students</p>
-            </div>
-          </div>
-
-          <div className="rounded-[5px] bg-card p-5 flex items-center gap-6">
-            <i className="fas fa-chalkboard-user text-[40px]"></i>
-            <div>
-              <h3 className="text-[25px] mb-1">+2k</h3>
-              <p className="text-[17px]">expert tutors</p>
-            </div>
-          </div>
-
-          <div className="rounded-[5px] bg-card p-5 flex items-center gap-6">
-            <i className="fas fa-briefcase text-[40px]"></i>
-            <div>
-              <h3 className="text-[25px] mb-1">100%</h3>
-              <p className="text-[17px]">job placement</p>
-            </div>
-          </div>
+          {data &&
+            data.map((item, id) => (
+              <div
+                className="rounded-[5px] bg-card p-5 flex items-center gap-6"
+                key={id}
+              >
+                <i className={`${item.icon} text-[40px]`}></i>
+                <div>
+                  <h3 className="text-[25px] mb-1">{item.title}</h3>
+                  <p className="text-[17px]">{item.content}</p>
+                </div>
+              </div>
+            ))}
         </div>
       </section>
 

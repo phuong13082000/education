@@ -1,4 +1,5 @@
 import { Course } from "../components/course";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 
 const courses = [
   {
@@ -35,13 +36,18 @@ export default function TeacherProfile() {
 
         <div className="text-center bg-card rounded-[5px] p-5">
           <div>
-            <img
-              src="pic-2.jpg"
-              alt=""
-              className="h-[100px] w-[100px] rounded-full object-cover mb-2.5 mx-auto"
-            />
-            <h3 className="text-[20px]">john deo</h3>
-            <span className="text-[17px]">developer</span>
+            <Avatar className="size-28 mx-auto mb-2.5">
+              <AvatarImage
+                src="pic-2.jpg"
+                alt="user-avatar"
+                className="object-contain"
+              />
+              <AvatarFallback>A</AvatarFallback>
+            </Avatar>
+            <h3 className="text-[20px] text-foreground overflow-hidden text-ellipsis whitespace-nowrap mx-auto">
+              ano qty
+            </h3>
+            <p className="text-[18px] text-[#888] mx-auto">developer</p>
           </div>
           <div className="flex flex-wrap gap-4 mt-5">
             <p className="flex-[1_1_200px] rounded-[5px] bg-border p-[12px_20px] text-[18px]">
@@ -60,7 +66,7 @@ export default function TeacherProfile() {
         </div>
       </section>
 
-      <section className="courses">
+      <section>
         <h1 className="heading">Our Courses</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-start">

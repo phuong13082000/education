@@ -22,7 +22,6 @@ export default function Profile() {
               ano qty
             </h3>
             <p className="text-[18px] text-[#888] mx-auto">student</p>
-            {/* update */}
             <Button className="mt-3">
               <Link to="/update-profile">Update Profile</Link>
             </Button>
