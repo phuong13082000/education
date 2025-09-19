@@ -2,6 +2,7 @@ import { Search } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { Link } from "react-router-dom";
 
 const teachers = [
   {
@@ -124,7 +125,7 @@ export default function Teachers() {
                 </p>
                 {/* teacher profile */}
                 <Button className="mt-3">
-                  View Profile
+                  <Link to="/profile-teacher">View Profile</Link>
                 </Button>
               </div>
             ))}

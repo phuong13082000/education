@@ -9,6 +9,8 @@ const menuItems = [
   { name: "Courses", icon: "fas fa-graduation-cap", href: "/courses" },
   { name: "Teachers", icon: "fas fa-chalkboard-user", href: "/teachers" },
   { name: "Contact", icon: "fas fa-headset", href: "/contact" },
+  { name: "Login", icon: "fas fa-user", href: "/login" },
+  { name: "Register", icon: "fas fa-user", href: "/register" },
 ];
 
 type Sidebar = {

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -12,28 +13,32 @@ type CourseProp = {
   title: string;
   thumb: string;
   totalVideo: string;
-  author: Author;
+  author?: Author;
 };
 
 export const Course = ({ title, thumb, totalVideo, author }: CourseProp) => {
   return (
     <div className="bg-card rounded-[0.5rem] p-5">
-      <div className="flex items-center gap-4 mb-6">
-        <Avatar className="size-12">
-          <AvatarImage
-            src={author.avatar}
-            alt={author.name}
-            className="object-cover"
-          />
-          <AvatarFallback>
-            {author.name ? author.name.charAt(0) : "?"}
-          </AvatarFallback>
-        </Avatar>
-        <div>
-          <h3 className="text-[18px] text-foreground mb-0.5">{author.name}</h3>
-          <span className="text-[13px] text-gray-500">{author.createAt}</span>
+      {author && (
+        <div className="flex items-center gap-4 mb-6">
+          <Avatar className="size-12">
+            <AvatarImage
+              src={author.avatar}
+              alt={author.name}
+              className="object-cover"
+            />
+            <AvatarFallback>
+              {author.name ? author.name.charAt(0) : "?"}
+            </AvatarFallback>
+          </Avatar>
+          <div>
+            <h3 className="text-[18px] text-foreground mb-0.5">
+              {author.name}
+            </h3>
+            <span className="text-[13px] text-gray-500">{author.createAt}</span>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="relative">
         <img
@@ -47,7 +52,9 @@ export const Course = ({ title, thumb, totalVideo, author }: CourseProp) => {
       </div>
 
       <h3 className="text-[20px] text-foreground pb-1.5 pt-2.5">{title}</h3>
-      <Button>View Playlist</Button>
+      <Button>
+        <Link to="/playlist">View Playlist</Link>
+      </Button>
     </div>
   );
 };

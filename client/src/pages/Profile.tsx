@@ -24,7 +24,7 @@ export default function Profile() {
             <p className="text-[18px] text-[#888] mx-auto">student</p>
             {/* update */}
             <Button className="mt-3">
-              <Link to="#">Update Profile</Link>
+              <Link to="/update-profile">Update Profile</Link>
             </Button>
           </div>
 
